@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hello-world
+      spec:
+        containers:
+        - name: HW
+          image: library/hello-world
+          ports:
+          - containerPort: 80
